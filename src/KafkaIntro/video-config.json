@@ -1,0 +1,166 @@
+{
+  "title": "Apache Kafka 핵심 가이드",
+  "fps": 30,
+  "background": "#0f0f23",
+  "scenes": [
+    {
+      "type": "hero",
+      "title": "Apache Kafka",
+      "subtitle": "대규모 실시간 데이터 스트리밍의 표준",
+      "background": "#1a1a2e",
+      "textColor": "#ffffff",
+      "duration": 6.8
+    },
+    {
+      "type": "list",
+      "title": "Kafka가 필요한 이유",
+      "items": [
+        "서비스 간 직접 통신은 결합도를 높이고 장애를 전파한다",
+        "데이터가 늘어날수록 동기 처리의 병목이 심해진다",
+        "이벤트 유실 없이 안정적으로 전달할 중간 계층이 필요하다",
+        "Kafka는 이 문제를 분산 메시지 브로커로 해결한다"
+      ],
+      "duration": 22.0
+    },
+    {
+      "type": "flow",
+      "title": "핵심 개념",
+      "steps": [
+        {
+          "label": "Producer",
+          "description": "이벤트를 Kafka에 발행"
+        },
+        {
+          "label": "Topic",
+          "description": "이벤트가 저장되는 카테고리"
+        },
+        {
+          "label": "Partition",
+          "description": "Topic을 분할하여 병렬 처리"
+        },
+        {
+          "label": "Consumer",
+          "description": "이벤트를 구독하여 소비"
+        },
+        {
+          "label": "Consumer Group",
+          "description": "파티션을 나눠 분산 소비"
+        }
+      ],
+      "duration": 21.7
+    },
+    {
+      "type": "sequence",
+      "title": "메시지 흐름",
+      "actors": [
+        "Producer",
+        "Kafka Broker",
+        "Consumer"
+      ],
+      "messages": [
+        {
+          "from": 0,
+          "to": 1,
+          "label": "send(topic, key, value)"
+        },
+        {
+          "from": 1,
+          "to": 1,
+          "label": "Partition에 append"
+        },
+        {
+          "from": 1,
+          "to": 1,
+          "label": "Replica에 복제"
+        },
+        {
+          "from": 2,
+          "to": 1,
+          "label": "poll() 요청"
+        },
+        {
+          "from": 1,
+          "to": 2,
+          "label": "메시지 배치 반환"
+        },
+        {
+          "from": 2,
+          "to": 1,
+          "label": "offset commit"
+        }
+      ],
+      "duration": 16.9
+    },
+    {
+      "type": "stat",
+      "title": "Kafka 규모",
+      "stats": [
+        {
+          "label": "LinkedIn 일일 메시지",
+          "value": 7,
+          "suffix": "T"
+        },
+        {
+          "label": "Fortune 100 도입률",
+          "value": 80,
+          "suffix": "%"
+        },
+        {
+          "label": "초당 처리량",
+          "value": 100,
+          "suffix": "만+"
+        }
+      ],
+      "duration": 5
+    },
+    {
+      "type": "list",
+      "title": "대표 활용 사례",
+      "items": [
+        "실시간 로그 수집 및 모니터링 파이프라인",
+        "마이크로서비스 간 이벤트 기반 통신",
+        "CDC로 데이터베이스 변경 사항 실시간 동기화",
+        "실시간 추천, 이상 탐지 등 스트림 프로세싱"
+      ],
+      "duration": 19.6
+    },
+    {
+      "type": "grid",
+      "title": "Kafka 생태계",
+      "columns": 3,
+      "cards": [
+        {
+          "title": "Kafka Connect",
+          "icon": "🔌",
+          "description": "외부 시스템 연동"
+        },
+        {
+          "title": "Kafka Streams",
+          "icon": "🌊",
+          "description": "스트림 프로세싱 라이브러리"
+        },
+        {
+          "title": "Schema Registry",
+          "icon": "📋",
+          "description": "메시지 스키마 관리"
+        },
+        {
+          "title": "KSQL",
+          "icon": "🔍",
+          "description": "SQL로 스트림 쿼리"
+        },
+        {
+          "title": "MirrorMaker",
+          "icon": "🪞",
+          "description": "클러스터 간 복제"
+        },
+        {
+          "title": "Confluent Cloud",
+          "icon": "☁️",
+          "description": "매니지드 Kafka 서비스"
+        }
+      ],
+      "duration": 6
+    }
+  ]
+}

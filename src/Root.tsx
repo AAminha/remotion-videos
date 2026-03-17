@@ -6,6 +6,12 @@ import {
   typeScriptSchema,
 } from "./TypeScript/schema";
 import typeScriptVideoConfig from "./TypeScript/video-config.json";
+import kafkaIntroVideoConfig from "./KafkaIntro/video-config.json";
+import { KafkaIntro } from "./KafkaIntro/KafkaIntro";
+import {
+  kafkaIntroSchema,
+  calculateKafkaIntroMetadata,
+} from "./KafkaIntro/schema";
 
 // Each <Composition> is an entry in the sidebar!
 // 이건 Remotion의 진입점 (entry point)
@@ -23,6 +29,19 @@ export const RemotionRoot: React.FC = () => {
         fps={30} // 초당 프레임 수
         width={1920} // 해상도 (가로)
         height={1080} // 해상도 (세로)
+      />
+
+      <Composition
+        id="KafkaIntro"
+        component={KafkaIntro}
+        schema={kafkaIntroSchema}
+        calculateMetadata={calculateKafkaIntroMetadata}
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        defaultProps={kafkaIntroVideoConfig as unknown as any}
+        durationInFrames={1}
+        fps={30}
+        width={1920}
+        height={1080}
       />
     </>
   );
