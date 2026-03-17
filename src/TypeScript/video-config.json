@@ -1,0 +1,89 @@
+{
+  "title": "Why TypeScript?",
+  "fps": 30,
+  "background": "#0f0f23",
+  "scenes": [
+    {
+      "type": "hero",
+      "title": "Why TypeScript?",
+      "subtitle": "타입 안전성이 바꾸는 개발 경험",
+      "background": "#1a1a2e",
+      "textColor": "#ffffff",
+      "duration": 4
+    },
+    {
+      "type": "list",
+      "title": "핵심 장점",
+      "items": [
+        "컴파일 타임에 버그를 잡아준다",
+        "IDE 자동완성이 강력해진다",
+        "코드가 자기 자신을 문서화한다",
+        "대규모 리팩토링이 안전해진다"
+      ],
+      "duration": 6
+    },
+    {
+      "type": "code",
+      "title": "타입 추론 예시",
+      "code": "const user = { name: \"Alice\", age: 30 };\n\n// TypeScript가 string으로 알고 있음\nconst greeting = `Hello, ${user.name}`;\n\n// Error: age는 number, toUpperCase() 불가\nuser.age.toUpperCase();",
+      "language": "typescript",
+      "duration": 7
+    },
+    {
+      "type": "stat",
+      "title": "TypeScript 현황",
+      "stats": [
+        { "label": "GitHub Stars", "value": 98, "suffix": "K" },
+        { "label": "주간 다운로드", "value": 45, "suffix": "M" },
+        { "label": "개발자 만족도", "value": 93, "suffix": "%" }
+      ],
+      "duration": 5
+    },
+    {
+      "type": "flow",
+      "title": "개발 워크플로우",
+      "steps": [
+        { "label": "TS 작성", "description": "타입 안전 코드" },
+        { "label": "컴파일", "description": "tsc가 오류 감지" },
+        { "label": "테스트", "description": "런타임 버그 감소" },
+        { "label": "배포", "description": "자신 있게" }
+      ],
+      "duration": 6
+    },
+    {
+      "type": "chat",
+      "title": "팀 도입 대화",
+      "messages": [
+        {
+          "sender": "개발자",
+          "text": "TypeScript 도입할까요?",
+          "isUser": true
+        },
+        {
+          "sender": "리드",
+          "text": "당연하죠. 타입 안전성만으로도 충분한 이유가 돼요."
+        },
+        { "sender": "개발자", "text": "학습 곡선은요?", "isUser": true },
+        {
+          "sender": "리드",
+          "text": "점진적으로 도입 가능해요. 기존 JS 프로젝트에도 적용돼요."
+        }
+      ],
+      "duration": 6
+    },
+    {
+      "type": "grid",
+      "title": "생태계",
+      "columns": 3,
+      "cards": [
+        { "title": "React", "icon": "⚛️", "description": "완전한 TS 지원" },
+        { "title": "Next.js", "icon": "▲", "description": "TS로 구축됨" },
+        { "title": "Prisma", "icon": "💎", "description": "타입 안전 ORM" },
+        { "title": "tRPC", "icon": "🔗", "description": "엔드투엔드 타입" },
+        { "title": "Zod", "icon": "✅", "description": "런타임 검증" },
+        { "title": "Vite", "icon": "⚡", "description": "빠른 빌드" }
+      ],
+      "duration": 6
+    }
+  ]
+}
