@@ -1,54 +1,36 @@
-# Remotion video
+# remotion-videos
 
-<p align="center">
-  <a href="https://github.com/remotion-dev/logo">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-dark.apng">
-      <img alt="Animated Remotion Logo" src="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-light.gif">
-    </picture>
-  </a>
-</p>
+[Remotion](https://www.remotion.dev/)으로 만드는 개발 관련 영상 프로젝트입니다.
 
-Welcome to your Remotion project!
+주제만 던지면 Claude Code 커스텀 스킬이 영상 구성(씬, 자막, 나레이션)을 자동으로 설계하고, Edge TTS로 음성을 생성한 뒤 Remotion으로 렌더링까지 처리합니다. 영상 한 편을 만드는 데 실질적인 코딩이 거의 필요하지 않습니다.
 
-## Commands
+## 기술 스택
 
-**Install Dependencies**
+- [Remotion](https://www.remotion.dev/) 4.0
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- [Edge TTS](https://github.com/rany2/edge-tts) - 나레이션 음성 생성
+- [Claude Code](https://claude.ai/code) + 커스텀 스킬 - 영상 자동 생성
 
-```console
-npm i
-```
+## 시작하기
 
-**Start Preview**
+```bash
+npm install
 
-```console
+# Remotion Studio 실행
 npm run dev
 ```
 
-**Render video**
+## 영상 목록
 
-```console
-npx remotion render
-```
+| 영상       | 설명              |
+| ---------- | ----------------- |
+| TypeScript | TypeScript 소개   |
+| KafkaIntro | Apache Kafka 소개 |
 
-**Upgrade Remotion**
+## 예시
 
-```console
-npx remotion upgrade
-```
+### KafkaIntro
 
-## Docs
-
-Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).
-
-## Help
-
-We provide help on our [Discord server](https://discord.gg/6VzzNDwUwV).
-
-## Issues
-
-Found an issue with Remotion? [File an issue here](https://github.com/remotion-dev/remotion/issues/new).
-
-## License
-
-Note that for some entities a company license is needed. [Read the terms here](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md).
+https://github.com/user-attachments/assets/8cf6ae12-acef-478a-a050-066e2c453e93
